@@ -1,0 +1,17 @@
+<!-- Применяю директиву @input -->
+<h1>Изучаем директиву input: {{item}}</h1>
+<h2>{{id}} {{title}}</h2>
+<p>{{description}}</p>
+
+<!-- Применяю директиву @output -->
+
+<label>
+  Add item <input #newItem>
+</label>
+
+<!-- Изучаю Event binding -->
+<button (click)="addNewItem(newItem.value)">
+  Add to parent's list
+</button>
+
+<input (keydown.shift.t)="onKeydown($event)" />
