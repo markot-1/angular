@@ -1,0 +1,56 @@
+.course-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-size: 0.8em;
+}
+
+.course-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-information {
+    display: flex;
+}
+
+.course-information__duration,
+.course-information__date {
+    padding-left: 10px;
+    color: grey;
+}
+
+.course-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.edit-button {
+    margin-right: 20px;
+}
+
+button {
+    background-color: rgb(55, 179, 217);
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-size: 0.8em;
+    width: 60px;
+    height: 25px;
+}
+
+button>img {
+    height: 1.2em;
+    padding-right: 2px;
+}
+
+p {
+    line-height: 140%;
+}

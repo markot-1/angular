@@ -1,15 +1,6 @@
-<div class="section">
-
-  <p>section works!</p>
-  <!-- в дочернем теге первая строка передает input, вторая output -->
+<div class="section-container">
   <app-courses 
-    [item]="currentItem" 
-    (newItemEvent)="addItem($event)"
-    >
-  </app-courses>
-
-  <!-- Отображаем output, переданный из дочернего элемента, на странице -->
-  <ul>
-    <li *ngFor="let item of items">{{item}}</li>
-  </ul>
+  *ngFor="let course of coursesList"
+  [course]="course"
+  ></app-courses>
 </div>

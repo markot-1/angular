@@ -1,0 +1,9 @@
+.breadcrumbs-container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+p {
+    margin: 0 20px;
+}
