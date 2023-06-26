@@ -9,12 +9,14 @@
       </button>
     </div>
     <app-courses 
-      *ngFor="let course of coursesList" 
+      *ngFor="let course of coursesList"
       [course]="course"
     >
     </app-courses>
-    <div class="additional-info">
-      <a href="#">Load more</a>
+    <div class="additional-info"
+    (click)="clickHandler()"
+    >
+      <p>Load more</p>
     </div>
   </div>
 </div>

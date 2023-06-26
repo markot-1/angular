@@ -60,7 +60,7 @@
 
 .additional-info {
     margin: 20px 0;
-    padding: 20px;
+    padding: 10px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
@@ -69,6 +69,6 @@
     text-align: center;
 }
 
-.additional-info>a {
+.additional-info>p {
     color: blue;
 }

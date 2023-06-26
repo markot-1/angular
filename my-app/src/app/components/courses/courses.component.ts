@@ -8,5 +8,13 @@ import { Course } from 'src/app/course';
 })
 export class CoursesComponent {
   @Input() course!: Course;
+
+  editHandler() {
+    console.log('edit');
+  }
+
+  deleteHandler() {
+    console.log(`${this.course.id}`);
+  }
 }
 
