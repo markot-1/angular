@@ -1,6 +1,20 @@
 <div class="section-container">
-  <app-courses 
-  *ngFor="let course of coursesList"
-  [course]="course"
-  ></app-courses>
+  <div class="content-container">
+    <input type="text" placeholder="text to search" class="text-input" />
+    <button class="search-button">Search</button>
+    <div class="button-container">
+      <button class="add-course-button">
+        <span>+</span>
+        Add course
+      </button>
+    </div>
+    <app-courses 
+      *ngFor="let course of coursesList" 
+      [course]="course"
+    >
+    </app-courses>
+    <div class="additional-info">
+      <a href="#">Load more</a>
+    </div>
+  </div>
 </div>

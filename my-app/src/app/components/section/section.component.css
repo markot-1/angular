@@ -4,8 +4,71 @@
     min-height: 20em;
     display: flex;
     flex-direction: column;
+    font-family: Ubuntu;
 }
 
-app-courses {
-    margin: 10px 20px;
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-input {
+   border: none;
+   box-shadow: 0 0 1px 1px rgba(221, 221, 221, 1);
+   height: 40px;
+   min-width: 250px;
+   background: url('../../../assets/icons/icons8-search-50.png') no-repeat;
+   background-position: 5px;
+   background-size:11%;
+   outline: none;
+   padding-left: 40px;
+}
+
+.search-button {
+    background-color: rgb(155, 200, 55);
+    border: none;
+    border-radius: 2px;
+    color: white;
+    width: 70px;
+    height: 42px;
+    margin-left: -10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: end;
+    margin: 15px 0;
+    align-items:center;
+}
+
+.add-course-button {
+    background-color: rgb(55, 179, 217);
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-size: 0.8em;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+}
+
+.add-course-button>span {
+    font-size: 1.8em;
+    vertical-align: sub;
+}
+
+.additional-info {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    font-size: 0.8em;
+    justify-self: center;
+    text-align: center;
+}
+
+.additional-info>a {
+    color: blue;
 }

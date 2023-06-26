@@ -14,7 +14,8 @@
 
 p {
     padding: 0 20px;
-    color: white;
+    color: rgb(216, 216, 216);
+    font-size: 0.8em;
 }
 
 app-logo {
