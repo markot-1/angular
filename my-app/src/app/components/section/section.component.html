@@ -11,6 +11,7 @@
     <app-courses 
       *ngFor="let course of coursesList"
       [course]="course"
+      (newItemEvent)="deleteItemParent($event)"
     >
     </app-courses>
     <div class="additional-info"
