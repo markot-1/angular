@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, TrackByFunction } from '@angular/core';
 import { Course } from 'src/app/course';
 
 @Component({
@@ -31,13 +31,12 @@ export class SectionComponent {
     },
   ]
 
-  deleteItemParent(course: any) {
-    for(let i = 0; i < this.coursesList.length; i++) {
-      if(this.coursesList[i] == course) {
-        this.coursesList.splice(i, 1);
-      }
-    }
-  } 
+  trackById: TrackByFunction<Course> = (index: number, course: Course) => course.id;
+
+  deleteItemParent(i: number) {
+    this.coursesList.splice(i, 1);
+  }
+
 
   clickHandler() {
     console.log('click');

@@ -9,9 +9,10 @@
       </button>
     </div>
     <app-courses 
-      *ngFor="let course of coursesList"
+      *ngFor="let course of coursesList; let i = index; trackBy: trackById"
       [course]="course"
-      (newItemEvent)="deleteItemParent($event)"
+      [i]="i"
+      (newItemEvent)="deleteItemParent(i)"
     >
     </app-courses>
     <div class="additional-info"

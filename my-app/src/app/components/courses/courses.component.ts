@@ -8,14 +8,15 @@ import { Course } from 'src/app/course';
 })
 export class CoursesComponent {
   @Input() course!: Course;
-  @Output() newItemEvent = new EventEmitter<any>();
+  @Input() i!: number;
+  @Output() newItemEvent = new EventEmitter<Course>();
 
-  deleteItem(course: any) {
+  deleteItem(course: Course) {
     this.newItemEvent.emit(course);
   }
 
-  editHandler() {
-    console.log('edit');
+  editHandler(i: number) {
+    console.log(i);
   }
 }
 

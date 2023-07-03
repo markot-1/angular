@@ -1,6 +1,6 @@
 .section-container {
     background-color: rgb(242, 243, 247);
-    margin: 0;
+    margin-bottom: 60px;
     min-height: 20em;
     display: flex;
     flex-direction: column;
