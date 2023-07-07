@@ -1,5 +1,6 @@
-import { Component, TrackByFunction } from '@angular/core';
+import { Component, TrackByFunction, inject } from '@angular/core';
 import { Course } from 'src/app/course';
+import { CoursesService } from 'src/app/courses.service';
 
 @Component({
   selector: 'app-section',
@@ -7,29 +8,12 @@ import { Course } from 'src/app/course';
   styleUrls: ['./section.component.css']
 })
 export class SectionComponent {
-  coursesList: Course[] = [
-    {
-      id: 'Video Course 1',
-      title: "Name Tag",
-      creationDate: "9 Nov. 2018",
-      duration: '1h 28min',
-      description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
-    {
-      id: 'Video Course 2',
-      title: "Name Tag",
-      creationDate: "9 Nov. 2018",
-      duration: '1h 28min',
-      description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
-    {
-      id: 'Video Course 3',
-      title: "Name Tag",
-      creationDate: "9 Nov. 2018",
-      duration: '1h 28min',
-      description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
-  ]
+  coursesList: Course[] = [];
+  coursesService: CoursesService = inject(CoursesService);
+
+  constructor() {
+    this.coursesList = this.coursesService.getAllCourses();
+  }
 
   trackById: TrackByFunction<Course> = (index: number, course: Course) => course.id;
 
